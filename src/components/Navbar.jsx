@@ -13,7 +13,7 @@ const Navbar = () => {
         setIsMenuOpen(isMenuOpen => !isMenuOpen)
     }
   return (
-    <div className='w-full p-2'>
+    <div className='w-full py-5'>
       <div className='max-w-[1400px] w-full mx-auto flex items-center justify-around'>
         <div> 
             <Link to='/'>
@@ -27,7 +27,7 @@ const Navbar = () => {
             {navLinks.map((link, i) => (
                 <ul key={i} className='hidden md:flex'>
                     <Link to={link.to}>
-                        <li className='text-lg font-medium hover:text-blue-600 cursor-pointer transition-all'>{link.name}</li>
+                        <li className='lg:text-md text-sm font-medium hover:text-blue-600 cursor-pointer transition-all'>{link.name}</li>
                     </Link>
                 </ul>
             ))}
