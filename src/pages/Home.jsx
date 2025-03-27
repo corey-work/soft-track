@@ -3,6 +3,9 @@ import Hero from '../components/Hero'
 import Information from '../components/Information'
 import Display from '../components/Display'
 import CallToAction from '../components/CallToAction'
+import Banner from '../components/Banner'
+import News from '../components/News'
+
 
 
 const Home = () => {
@@ -12,6 +15,8 @@ const Home = () => {
       <Information />
       <Display />
       <CallToAction />
+      <Banner>Learn about RMS</Banner>
+      <News />
     </div>
   )
 }

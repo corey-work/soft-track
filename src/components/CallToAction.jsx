@@ -10,7 +10,7 @@ const CallToAction = () => {
             </div>
       </div>
 
-            <div className='max-w-[100rem] mt-15 gap-3 mx-auto grid grid-cols-3 items-center justify-center'>
+            <div className='max-w-[100rem] mt-15 gap-3 mx-auto grid lg:grid-cols-3 items-center justify-center'>
             <div className='text-center max-h-[40rem] h-full p-3 border border-gray-300 bg-zinc-300 rounded-lg'>
                 <h1 className='py-4 text-2xl font-bold text-blue-800'>Reliable</h1>
                 <p className='font-medium tracking-wide text-gray-800'>Reliability is at the heart of SoftTrack. Our devices are built to perform in even the toughest environments, ensuring consistent tracking and connectivity. With built-in redundancy and backup options, you can count on SoftTrack to stay online when it matters most.</p>
