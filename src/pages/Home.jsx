@@ -5,6 +5,9 @@ import Display from '../components/Display'
 import CallToAction from '../components/CallToAction'
 import Banner from '../components/Banner'
 import News from '../components/News'
+import NewsLetter from '../components/NewsLetter'
+import Solution from '../components/Solution'
+import LowerBanner from '../components/LowerBanner'
 
 
 
@@ -17,6 +20,10 @@ const Home = () => {
       <CallToAction />
       <Banner>Learn about RMS</Banner>
       <News />
+      <NewsLetter />
+      <Solution />
+      <LowerBanner />
+      
     </div>
   )
 }
