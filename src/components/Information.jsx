@@ -6,7 +6,7 @@ const Information = () => {
       <div className='max-w-[1400px] mx-auto items-center justify-center grid lg:grid-cols-2 place-items-center'>
         <div className='row-span-2 p-3 items-center justify-center'>
           <h1 className='font-bold lg:text-4xl text-3xl text-gray-600'>Our Scope</h1>
-          <p className='font-bold lg:text-3xl text-blue-600'>The complete solution</p>
+          <p className='font-bold lg:text-3xl text-blue-800'>The complete solution</p>
           <button className='px-4 py-3 mt-4 bg-blue-500 rounded-lg text-white hover:scale-125 hover:bg-blue-800 transform duration-300 cursor-pointer'>About Us</button>
         </div>
 

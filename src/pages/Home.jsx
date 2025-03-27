@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Information from '../components/Information'
 import Display from '../components/Display'
+import CallToAction from '../components/CallToAction'
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Information />
       <Display />
+      <CallToAction />
     </div>
   )
 }
