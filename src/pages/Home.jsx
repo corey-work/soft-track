@@ -8,6 +8,8 @@ import News from '../components/News'
 import NewsLetter from '../components/NewsLetter'
 import Solution from '../components/Solution'
 import LowerBanner from '../components/LowerBanner'
+import Footer from '../components/Footer'
+import PriceCard from '../components/PriceCard'
 
 
 
@@ -23,7 +25,8 @@ const Home = () => {
       <NewsLetter />
       <Solution />
       <LowerBanner />
-      
+      <PriceCard />
+      <Footer />
     </div>
   )
 }

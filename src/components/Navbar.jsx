@@ -27,7 +27,7 @@ const Navbar = () => {
             {navLinks.map((link, i) => (
                 <ul key={i} className='hidden md:flex text-white'>
                     <Link to={link.to}>
-                        <li className='lg:text-md text-sm font-medium hover:text-blue-600 cursor-pointer transition-all'>{link.name}</li>
+                        <li className='lg:text-md text-sm font-medium hover:text-blue-400 cursor-pointer transition-all'>{link.name}</li>
                     </Link>
                 </ul>
             ))}
