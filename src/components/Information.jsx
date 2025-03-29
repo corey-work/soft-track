@@ -10,7 +10,7 @@ const Information = () => {
           <button className='px-4 py-3 mt-4 bg-blue-400 rounded-lg text-white hover:scale-125 hover:bg-blue-600 transform duration-300 cursor-pointer'>About Us</button>
         </div>
 
-        <div className='grid lg:grid-rows-3 py-2 items-center justify-center'>
+        <div className='hidden lg:grid lg:grid-rows-3 py-2 items-center justify-center'>
         <div className=''>
           <h1 className='text-2xl py-1 lg:text-center text-start font-bold text-gray-600'>Driven by Inovation</h1>
           <p className='lg:text-lg text-md font-medium text-white'>At SoftTrack, our talented in-house team based in London's Shoreditch High Street leads the innovation behind our cutting-edge tracking technology. We move fast — developing new features and products with agility to meet evolving market demands.

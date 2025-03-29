@@ -3,7 +3,7 @@ import banner from '../assets/15.png'
 
 const LowerBanner = () => {
   return (
-    <div className='max-w-[1340px] overflow-auto max-h-auto w-full flex flex-col items-center justify-center relative p-3'>
+    <div className='max-w-[1340px] overflow-visible max-h-auto flex flex-col items-center justify-center relative p-3'>
       <img className='rounded-lg brightness-50 w-full object-cover' src={banner} alt="" />
       <div className='absolute inset-0 flex flex-col justify-center lg:items-start items-center pl-18'>
         <h1 className='text-3xl py-3 font-bold text-white'>Our Device Your Solution</h1>
