@@ -21,7 +21,7 @@ const News = () => {
         <div>
             <img className='hover:brightness-50 transition-all ease-in-out duration-300 cursor-pointer' src={img3} alt="" />
             <i className='text-gray-400 text-xs'>6th March 2025</i>
-            <p className='flex-wrap text-white text-sm font-medium hover:underline cursor-pointer'>Enhanced connectivity capabilities with the RUT206 4G router </p>
+            <p className='flex-wrap text-white text-sm font-medium hover:underline cursor-pointer'>Enhanced connectivity capabilities with the RUT206 4G</p>
         </div>
       </div>
     </div>

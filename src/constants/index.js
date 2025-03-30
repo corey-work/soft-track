@@ -30,7 +30,7 @@ export const pricingCards = [
     {
       id: 1,
       title: 'Standard',
-      price: '£35.99',
+      price: '£34.99',
       features: [
         'Access to 1 tracking device',
         'Basic location tracking',
@@ -41,7 +41,7 @@ export const pricingCards = [
     {
       id: 2,
       title: 'Intermediate',
-      price: '£50.99',
+      price: '£49.99',
       features: [
         'Access to 3 tracking devices',
         'Real-time GPS updates',
@@ -52,14 +52,14 @@ export const pricingCards = [
     {
       id: 3,
       title: 'Pro',
-      price: '£70.99',
+      price: '£69.99',
       features: [
         'Access to 5+ tracking devices',
         'Advanced geofencing alerts',
         '24/7 priority support',
         'Detailed usage & performance dashboard',
       ],
-      gradient: 'bg-gradient-to-br from-blue-600 via-black to-gray-900',
+      gradient: 'bg-gradient-to-br from-blue-400 via-black to-gray-900',
       textColor: 'text-white',
       headingColor: 'text-white'
     },
