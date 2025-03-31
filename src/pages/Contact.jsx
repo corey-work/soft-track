@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import Spinner from '../components/ui/Spinner'
 
 const Contact = () => {
   const [status, setStatus] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -10,6 +12,7 @@ const Contact = () => {
     const data = Object.fromEntries(formData)
 
     try {
+        setIsLoading(true)
       const res = await fetch('https://formspree.io/f/xvgkbyow', {
         method: 'POST',
         headers: {
@@ -21,6 +24,7 @@ const Contact = () => {
       if (res.ok) {
         setStatus('SUCCESS')
         e.target.reset()
+        setIsLoading(false)
       } else {
         setStatus('ERROR')
       }
@@ -29,6 +33,7 @@ const Contact = () => {
     }
   }
 
+  if (isLoading) return <Spinner />
   return (
     <div className="w-full">
       {/* Page Heading */}
@@ -86,6 +91,7 @@ const Contact = () => {
             </textarea>
           </div>
           <button
+          disabled={isLoading}
             type="submit"
             className="bg-blue-600 text-white font-semibold px-6 py-2 rounded hover:bg-blue-700 transition cursor-pointer"
           >

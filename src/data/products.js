@@ -25,10 +25,10 @@ export const products = [
       images: [
         trackerImg,
         trackerImg2,
-        trackerImg3,
+        trackerImg6,
         trackerImg4,
         trackerImg5,
-        trackerImg6,
+        trackerImg3,
         trackerImg7,
         trackerImg8,
         trackerImg9,

@@ -54,7 +54,6 @@ const Footer = () => {
                 <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Email</li>
                 <li className='py-1 text-xs text-gray-500 hover:text-blue-400 cursor-pointer'>Phone</li>
                 <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Location</li>
-                
                 </Link>
             </ul>
         </div>

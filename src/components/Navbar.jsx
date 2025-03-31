@@ -30,16 +30,16 @@ const Navbar = () => {
           <Search />
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <div className="flex flex-row items-center gap-8 justify-center">
           {navLinks.map((link, i) => (
             <ul key={i} className="hidden md:flex text-white relative group">
-              {/* Special case for "Products" */}
+              {/* Products Dropdown */}
               {link.name === 'Products' ? (
                 <>
-                  <div className="flex items-center gap-1 lg:text-md text-sm font-medium cursor-pointer hover:text-blue-400 transition-all">
+                  <div className="flex items-center gap-1 text-sm font-medium cursor-pointer hover:text-blue-400 transition-all">
                     <Link to={link.to}>
-                      <span className="hover:text-blue-400">{link.name}</span>
+                      <span>{link.name}</span>
                     </Link>
                     <svg
                       className="w-4 h-4 mt-[2px] transform transition-transform duration-300 group-hover:rotate-180"
@@ -52,15 +52,44 @@ const Navbar = () => {
                     </svg>
                   </div>
 
-                  {/* Dropdown menu */}
                   <div className="absolute top-7 left-0 w-56 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
                     {products.map((product, index) => (
                       <Link to={`/products/${product.id}`} key={index}>
-                        <div className="px-4 py-2 text-sm text-gray-800 hover:rounded-xl hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-all">
+                        <div className="px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:rounded-xl hover:text-blue-600 transition-all">
                           {product.name}
                         </div>
                       </Link>
                     ))}
+                  </div>
+                </>
+              ) : link.name === 'Services' ? (
+                <>
+                  <div className="flex items-center gap-1 text-sm font-medium cursor-pointer hover:text-blue-400 transition-all">
+                    <Link to={link.to}>
+                      <span>{link.name}</span>
+                    </Link>
+                    <svg
+                      className="w-4 h-4 mt-[2px] transform transition-transform duration-300 group-hover:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+
+                  <div className="absolute top-7 left-0 w-56 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+                    <Link to="/services/software">
+                      <div className="px-4 py-2 text-sm text-gray-800 hover:rounded-lg hover:bg-blue-100 hover:text-blue-600 transition-all">
+                        Software
+                      </div>
+                    </Link>
+                    <Link to="/services/hardware">
+                      <div className="px-4 py-2 text-sm text-gray-800 hover:rounded-lg hover:bg-blue-100 hover:text-blue-600 transition-all">
+                        Hardware
+                      </div>
+                    </Link>
                   </div>
                 </>
               ) : (
@@ -83,7 +112,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Sidebar Menu */}
+        {/* Mobile Sidebar */}
         <div
           className={
             isMenuOpen

@@ -12,6 +12,14 @@ export const navLinks = [
       to: '/products',
     },
     {
+      name: 'Services',
+      to: '/services',
+      subRoutes: [
+        { name: 'Software', to: '/services/software' },
+        { name: 'Hardware', to: '/services/hardware' },
+      ]
+    },
+    {
       name: 'Support',
       to: '/support',
     },

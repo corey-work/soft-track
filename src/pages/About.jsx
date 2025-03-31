@@ -1,5 +1,6 @@
 import React from 'react'
-import aboutBanner from '../assets/about-banner.png' // Replace with your banner image
+import aboutBanner from '../assets/about-banner.png';
+import aboutBanner2 from '../assets/about-banner2.png'
 
 const About = () => {
   return (
@@ -65,6 +66,10 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className='w-full h-24 sm:h-80 md:h-[400px]'>
+        <img src={aboutBanner2} alt="" />
       </div>
 
       {/* Optional Vision/Team Section */}
