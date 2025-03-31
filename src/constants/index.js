@@ -4,6 +4,14 @@ export const navLinks = [
         to: '/',
     },
     {
+        name: 'About Us',
+        to: '/about-us',
+    },
+    {
+        name: 'Contact',
+        to: '/contact',
+    },
+    {
         name: 'Products',
         to: '/products',
     },
@@ -11,18 +19,10 @@ export const navLinks = [
         name: 'Support',
         to: '/support',
     },
-    {
-        name: 'News',
-        to: '/news',
-    },
-    {
-        name: 'Contact',
-        to: '/contact',
-    },
-    {
-        name: 'About Us',
-        to: '/about-us',
-    },
+    // {
+    //     name: 'News',
+    //     to: '/news',
+    // },
 ]
 
 
