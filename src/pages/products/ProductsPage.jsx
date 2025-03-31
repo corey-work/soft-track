@@ -19,8 +19,10 @@ const ProductsPage = () => {
               Explore Our Product Line
             </h1>
             <p className="text-white mt-2 text-lg drop-shadow-md">
-            SoftTrack offers a comprehensive range of tracking solutions designed to ensure your connectivity is reliable, secure, and quick to deploy. Whether you're building an IoT, M2M, or enterprise-grade infrastructure, our products provide the foundation you need — with advanced remote management tools that make control and oversight effortless.
-            Looking for something specific or unique? Get in touch — we may already have the perfect solution ready for you.
+            SoftTrack delivers intelligent tracking solutions built for speed, security, and rock-solid reliability.
+Whether you're scaling an IoT system, managing enterprise assets, or deploying connected devices in the field, SoftTrack gives you the foundation to operate with confidence. Our advanced remote management tools make it effortless to monitor and control your infrastructure from anywhere.
+
+Looking for something tailored? Reach out we might already have the solution you need.
             </p>
           </div>
         </div>

@@ -8,6 +8,7 @@ import ProductDetails from "./pages/products/ProductDetails";
 import SupportPage from "./pages/SupportPage";
 import NewsPage from "./pages/NewsPage";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products/:productId" element={<ProductDetails />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/support" element={<SupportPage />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<NewsPage />} />
         </Routes>
       </div>

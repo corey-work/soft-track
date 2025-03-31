@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Information = () => {
   return (
@@ -7,7 +8,10 @@ const Information = () => {
         <div className='row-span-2 py-9 items-center justify-center'>
           <h1 className='font-bold lg:text-4xl text-3xl text-gray-600'>Our Scope</h1>
           <p className='font-bold lg:text-3xl text-blue-400'>The complete solution</p>
+          <Link to={'/about-us'}>
           <button className='px-4 py-3 mt-4 bg-blue-400 rounded-lg text-white hover:scale-125 hover:bg-blue-600 transform duration-300 cursor-pointer'>About Us</button>
+          
+          </Link>
         </div>
 
         <div className='hidden lg:grid lg:grid-rows-3 py-2 items-center justify-center'>

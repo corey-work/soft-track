@@ -3,6 +3,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -22,11 +23,19 @@ const Footer = () => {
         <div>
             <ul className='text-white'>
                 <h2 className='mb-2 font-bold text-gray-700'>Quick Links</h2>
-                <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Home</li>
-                <li className='py-1 text-xs text-gray-500 hover:text-blue-400 cursor-pointer'>Products</li>
-                <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Support</li>
-                <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>News</li>
+                <Link to={'/'}>
+                    <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Home</li>
+                </Link>
+                <Link to={'/products'}>
+                    <li className='py-1 text-xs text-gray-500 hover:text-blue-400 cursor-pointer'>Products</li>
+                </Link>
+                <Link to={'/support'}>
+                    <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Support</li>
+                </Link>
+                <Link to={'/about-us'}>
                 <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>About Us</li>
+                    
+                </Link>
             </ul>
         </div>
         <div>
@@ -41,9 +50,12 @@ const Footer = () => {
         <div>
             <ul className='text-white'>
                 <h2 className='mb-2 font-bold text-gray-700'>Contact</h2>
+                <Link to={'/contact'}>
                 <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Email</li>
                 <li className='py-1 text-xs text-gray-500 hover:text-blue-400 cursor-pointer'>Phone</li>
                 <li className='py-1 text-xs font-medium text-gray-500 hover:text-blue-400 cursor-pointer'>Location</li>
+                
+                </Link>
             </ul>
         </div>
         <div className='col-span-4 mt-5 border w-full border-gray-300'></div>

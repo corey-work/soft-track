@@ -56,7 +56,7 @@ const Navbar = () => {
                   <div className="absolute top-7 left-0 w-56 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
                     {products.map((product, index) => (
                       <Link to={`/products/${product.id}`} key={index}>
-                        <div className="px-4 py-2 text-sm text-gray-800 hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-all">
+                        <div className="px-4 py-2 text-sm text-gray-800 hover:rounded-xl hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-all">
                           {product.name}
                         </div>
                       </Link>

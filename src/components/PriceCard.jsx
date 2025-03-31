@@ -1,5 +1,6 @@
 import React from 'react'
 import { pricingCards } from '../constants'
+import { Link } from 'react-router-dom'
 
 const PriceCard = () => {
   return (
@@ -16,7 +17,10 @@ const PriceCard = () => {
                         </li>
                     ))}
                 </ul>
+                <Link to={'/contact'}>
                 <button className='bg-blue-400 px-4 py-2 mb-4 font-semibold rounded-lg text-sm hover:bg-blue-800 cursor-pointer transition-all ease-in'>Order Now</button>
+                
+                </Link>
             </div>
         ))}
       </div>

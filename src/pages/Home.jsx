@@ -19,7 +19,7 @@ const Home = () => {
       <Information />
       <Display />
       <CallToAction />
-      <Banner>Learn about RMS</Banner>
+      <Banner>Learn more about our tracking devices</Banner>
       <News />
       <NewsLetter />
       <Solution />

@@ -128,7 +128,7 @@ const SupportPage = () => {
               >
                 <span>{faq.question}</span>
                 <svg
-                  className={`w-5 h-5 transform transition-transform duration-300 ${
+                  className={`w-5 h-5 transform transition-transform duration-300 cursor-pointer ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                   fill="none"

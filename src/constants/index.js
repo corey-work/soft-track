@@ -8,16 +8,16 @@ export const navLinks = [
         to: '/about-us',
     },
     {
+      name: 'Products',
+      to: '/products',
+    },
+    {
+      name: 'Support',
+      to: '/support',
+    },
+    {
         name: 'Contact',
         to: '/contact',
-    },
-    {
-        name: 'Products',
-        to: '/products',
-    },
-    {
-        name: 'Support',
-        to: '/support',
     },
     // {
     //     name: 'News',

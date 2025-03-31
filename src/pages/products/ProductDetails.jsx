@@ -57,7 +57,7 @@ const ProductDetails = () => {
               Learn More
             </button>
 
-            <Link to="/products" className="mt-6 text-blue-500 hover:underline">
+            <Link to="/products" className="mt-6 text-blue-500 hover:text-blue-700 hover:underline transition-all ease-out">
               ← Back to Products
             </Link>
           </div>
