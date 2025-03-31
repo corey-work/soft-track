@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
   return (
     <div className="w-full">
-      {/* Product Banner */}
+      {/* Banner */}
       <div className="relative w-full h-64 sm:h-80 md:h-[400px]">
         <img
           src={product.banner}
@@ -36,10 +36,10 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Product Detail Card */}
+      {/* Product Details */}
       <div className="p-6 sm:p-10 max-w-5xl mx-auto">
         <div className="bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
-          {/* Product Image */}
+          {/* Image */}
           <div className="md:w-1/2">
             <img
               src={product.image2}
@@ -48,9 +48,9 @@ const ProductDetails = () => {
             />
           </div>
 
-          {/* Product Info */}
+          {/* Info */}
           <div className="md:w-1/2 p-6 flex flex-col justify-center">
-            
+           
             <p className="text-gray-600 text-lg mb-6">{product.description}</p>
 
             <button className="w-max bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
@@ -62,6 +62,23 @@ const ProductDetails = () => {
             </Link>
           </div>
         </div>
+
+        {/* Image Gallery */}
+        {product.images && product.images.length > 0 && (
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold mb-4">Gallery</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {product.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`${product.name} image ${idx + 1}`}
+                  className="w-full h-56 object-cover rounded-lg shadow-md"
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
