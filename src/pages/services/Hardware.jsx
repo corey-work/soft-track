@@ -1,6 +1,7 @@
 import React from 'react'
 import hardwareBanner from '../../assets/hardware-banner.png'
 import hardwareImg1 from '../../assets/software3.png'
+import hardwareImg2 from '../../assets/hardware2.png'
 import teltonikaLogo from '../../assets/teltonika-logo.png'
 
 const Hardware = () => {
@@ -37,13 +38,18 @@ const Hardware = () => {
           <li>Certified for harsh environments</li>
         </ul>
 
-        <div>
-            <img src={teltonikaLogo} alt="" />
+        <div className='place-items-center'>
+            <img src={teltonikaLogo} alt="teltonika logo" />
         </div>
 
-        <div className="p-6">
+        <div className="p-6 grid lg:grid-cols-2 gap-5">
             <img
                 src={hardwareImg1}
+                alt="SoftTrack Software Dashboard"
+                className="rounded-xl w-full max-w-[500px] h-auto shadow-lg"
+                />
+            <img
+                src={hardwareImg2}
                 alt="SoftTrack Software Dashboard"
                 className="rounded-xl w-full max-w-[500px] h-auto shadow-lg"
                 />

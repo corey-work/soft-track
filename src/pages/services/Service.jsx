@@ -28,7 +28,7 @@ const Services = () => {
           <h2 className="text-2xl font-bold text-blue-600 mb-2">Software Solutions</h2>
           <p className="text-gray-600 mb-4">
             Our cloud-based tracking platform provides real-time visibility, alerts, device management,
-            and reporting — all accessible from any device.
+            and reporting all accessible from any device.
           </p>
           <a href="/services/software" className="text-blue-600 font-medium hover:underline">Learn more →</a>
         </div>

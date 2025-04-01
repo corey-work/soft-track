@@ -1,6 +1,7 @@
 import React from 'react'
 import softwareBanner from '../../assets/software-banner.png'
 import softwareImg1 from '../../assets/software2.png'
+import softwareImg2 from '../../assets/software4.png'
 
 const Software = () => {
   return (
@@ -39,12 +40,20 @@ const Software = () => {
         </ul>
 
         {/* Image Section */}
-        <div className="p-6">
+        <div className="p-6 grid lg:grid-cols-2 gap-6">
           <img
             src={softwareImg1}
             alt="SoftTrack Software Dashboard"
             className="rounded-xl w-full max-w-[500px] max-h-[400px] h-auto shadow-lg"
           />
+          <div>
+
+          <img
+            src={softwareImg2}
+            alt="SoftTrack Software Dashboard"
+            className="rounded-xl h-[300px] object-cover w-full max-w-[500px] max-h-[400px] shadow-lg"
+          />
+          </div>
         </div>
       </div>
     </div>

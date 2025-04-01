@@ -13,6 +13,7 @@ import usePageTitle from "./hooks/usePageTitle";
 import Services from "./pages/services/Service";
 import Software from "./pages/services/Software";
 import Hardware from "./pages/services/Hardware";
+import ProductImageDetail from "./pages/products/ProductImageDetail";
 
 function App() {
   usePageTitle()
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:productId" element={<ProductDetails />} />
+          <Route path="/products/:productId/image/:imageIndex" element={<ProductImageDetail />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/software" element={<Software />} />

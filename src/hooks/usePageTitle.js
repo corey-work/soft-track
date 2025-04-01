@@ -13,6 +13,10 @@ const usePageTitle = () => {
         case '/trackers': return 'Trackers | SoftTrack'
         case '/support': return 'Support | SoftTrack'
         case '/news': return 'News | SoftTrack'
+        case '/products': return 'Products | SoftTrack'
+        case '/services': return 'Services | SoftTrack'
+        case '/services/software': return 'Software | SoftTrack'
+        case '/services/hardware': return 'Hardware | SoftTrack'
         case '/contact': return 'Contact | SoftTrack'
         case '/about-us': return 'About Us | SoftTrack'
         default:
