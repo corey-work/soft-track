@@ -1,39 +1,86 @@
-import trackerImg from '../assets/tracker1.png'
-import trackerImg2 from '../assets/tracker2.png'
-import trackerImg3 from '../assets/tracker3.png'
-import trackerImg4 from '../assets/tracker4.png'
-import trackerImg5 from '../assets/tracker5.png'
-import trackerImg6 from '../assets/tracker6.png'
-import trackerImg7 from '../assets/tracker7.png'
-import trackerImg8 from '../assets/tracker8.png'
-import trackerImg9 from '../assets/tracker9.png'
-import trackerImg10 from '../assets/tracker10.png'
-import trackerImg11 from '../assets/tracker13.png'
-import trackerImg12 from '../assets/tracker12.png'
-import trackerBanner from '../assets/router-banner.png'
+import banner from '../assets/router-banner.png'
+import fmc003 from '../assets/teltonika/teltonika-main.png'
+import fmc800 from '../assets/teltonika/fmc800.png'
+import ftc881 from '../assets/teltonika/ftc881.png'
+import fmc880 from '../assets/teltonika/fmc880.png'
+
 
 export const products = [
   {
-    id: 'trackers',
-    name: 'Trackers',
-    description:
-      'High-performance, industrial-grade tracking systems designed to ensure reliable and secure connectivity for your devices.',
-    image: trackerImg,
-    image2: trackerImg2,
-    banner: trackerBanner,
-    images: [
-      { src: trackerImg, description: 'Compact GPS tracker with extended battery life.' },
-      { src: trackerImg2, description: 'Industrial-grade GPS unit with rugged casing.' },
-      { src: trackerImg3, description: 'Water-resistant tracker with real-time alerts.' },
-      { src: trackerImg4, description: 'Portable unit ideal for fleet tracking.' },
-      { src: trackerImg5, description: 'Solar-powered GPS tracker for long-term use.' },
-      { src: trackerImg6, description: 'Slim tracker for asset and package tracking.' },
-      { src: trackerImg7, description: 'Built-in SIM and Wi-Fi capabilities.' },
-      { src: trackerImg8, description: 'Power-efficient unit with monthly sync.' },
-      { src: trackerImg9, description: 'Magnetic-mount tracker for vehicle use.' },
-      { src: trackerImg10, description: 'Low-profile design for covert deployment.' },
-      { src: trackerImg11, description: 'Tracker with motion sensor and geofence support.' },
-      { src: trackerImg12, description: 'Indoor/outdoor hybrid GPS tracker.' },
-    ]
-  }
+    id: 'fmc003',
+    name: 'Teltonika FMC003',
+    tagline: 'OBD 4G GPS Tracker - CAN BUS Reading - Read engine RPM, Fuel level, Fault Codes etc',
+    price: '€65.00 - €95.00',
+    banner,
+    description: `
+    TELTONIKA FMC003 4G GPS Tracker, the most advanced OBD GPS Tracker device from the leading manufacturer Teltonika.
+    
+    `,
+    features: [
+      'No minimum order',
+      'Mix models per shipping',
+      'Extra discount - 5% in all African countries',
+      'Free tracking for one year',
+      'Two-year warranty',
+      'Free support to configure the devices',
+    ],
+    image: fmc003,
+  },
+  {
+    id: 'fmc800',
+    name: 'Teltonika FMC800',
+    tagline: 'OBD 4G GPS Tracker - CAN BUS Reading – Read engine RPM, Fuel level, Fault Codes etc',
+    price: '€65.00 - €95.00',
+    banner,
+    description: `
+    Plug & Play tracker with 4G LTE Cat 1 connectivity.
+    `,
+    features: [
+      'No minimum order',
+      'Mix models per shipping',
+      'Extra discount - 5% in all African countries',
+      'Free tracking for one year',
+      'Two-year warranty',
+      'Free support to configure the devices',
+    ],
+    image: fmc800,
+  },
+  {
+    id: 'ftc881',
+    name: 'Teltonika FTC881',
+    tagline: 'OBD 4G GPS Tracker - CAN BUS Reading – Read engine RPM, Fuel level, Fault Codes etc',
+    price: '€65.00 - €95.00',
+    banner,
+    description: `
+    Next-generation high voltage 4G LTE Cat 1 battery-mounted vehicle GPS tracker with enhanced GNSS accuracy and IP69K resistance.
+    `,
+    features: [
+      'No minimum order',
+      'Mix models per shipping',
+      'Extra discount - 5% in all African countries',
+      'Free tracking for one year',
+      'Two-year warranty',
+      'Free support to configure the devices',
+    ],
+    image: ftc881,
+  },
+  {
+    id: 'fmc880',
+    name: 'Teltonika FMC880',
+    tagline: 'OBD 4G GPS Tracker - CAN BUS Reading – Read engine RPM, Fuel level, Fault Codes etc',
+    price: '€65.00 - €95.00',
+    banner,
+    description: `
+    Water-resistant high GNSS precision battery-mounted 4G LTE Cat 1 tracker.
+    `,
+    features: [
+      'No minimum order',
+      'Mix models per shipping',
+      'Extra discount - 5% in all African countries',
+      'Free tracking for one year',
+      'Two-year warranty',
+      'Free support to configure the devices',
+    ],
+    image: fmc880,
+  },
 ]

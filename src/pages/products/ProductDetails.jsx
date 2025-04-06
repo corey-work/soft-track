@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { products } from '../../data/products'
 
+
 const ProductDetails = () => {
   const { productId } = useParams()
   const product = products.find((p) => p.id === productId)
@@ -33,58 +34,50 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Details */}
-      <div className="p-6 sm:p-10 max-w-5xl mx-auto">
-        <div className="bg-white shadow-xl rounded-2xl overflow-hidden flex flex-col md:flex-row">
-          <div className="md:w-1/2">
-            <img
-              src={product.image2}
-              alt={product.name}
-              className="w-full h-64 md:h-full object-cover"
-            />
+      {/* Product Info */}
+      <div className="p-6 sm:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+        {/* Image */}
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full object-contain rounded-lg shadow-lg"
+        />
+
+        {/* Text */}
+        <div>
+          <h2 className="text-xl text-black/60 font-semibold mb-4">{product.tagline}</h2>
+          <p className='font-bold text-3xl text-gray-900'>{product.price}</p>
+          <p className="text-gray-700 mb-4 whitespace-pre-line">{product.description}</p>
+          <ul className="list-disc list-inside text-gray-600 mb-6">
+            {product.features.map((feature, i) => (
+              <li key={i}>{feature}</li>
+            ))}
+          </ul>
+
+            <div className='flex flex-col'>
+              <label htmlFor="">SIM card:</label>
+            <select className='p-2 hover:cursor-pointer border border-gray-300' name="" id="">
+              <option value="">Choose an option</option>
+              <option value="">SIM card not included: €65.00</option>
+              <option value="">SIM card included: €95.00 </option>
+            </select>
+            </div>
+          
+          <div className='flex py-3'>
+              <button className='bg-gray-200 px-2 hover:bg-gray-500 cursor-pointer transition-all ease-in'>-</button>
+              <button className='px-3 py-2 bg-blue-400 hover:bg-blue-700 transition-all ease-in cursor-pointer'>1</button>
+              <button className='bg-gray-200 px-2 hover:bg-gray-500 cursor-pointer transition-all ease-in'>+</button>
+              <div className='flex items-center justify-center'>
+                <button className='ml-6 font-bold px-4 py-3 rounded-lg bg-yellow-300 hover:bg-yellow-500 transition-all ease-in cursor-pointer'>Add to Cart</button>
+              </div>
           </div>
-          <div className="md:w-1/2 p-6 flex flex-col justify-center">
-            <p className="text-gray-600 text-lg mb-6">{product.description}</p>
-            <Link to="/contact">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">
-                Learn More
-              </button>
-            </Link>
-            <Link to="/products" className="mt-6 text-blue-500 hover:underline">
+
+          <div className="mt-6">
+            <Link to="/products" className="text-blue-500 hover:underline">
               ← Back to Products
             </Link>
           </div>
         </div>
-
-        {/* Gallery */}
-        {product.images && product.images.length > 0 && (
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold mb-4">Gallery</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {product.images.map((imgObj, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
-                >
-                  <img
-                    src={imgObj.src}
-                    alt={`Tracker ${idx + 1}`}
-                    className="w-full h-56 object-cover"
-                  />
-                  <div className="p-4 flex flex-col justify-between flex-1">
-                    
-                    <Link
-                      to={`/products/${product.id}/image/${idx}`}
-                      className="text-blue-600 font-medium hover:underline mt-auto"
-                    >
-                      View Details →
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )

@@ -1,6 +1,9 @@
 import React from 'react'
-import aboutBanner from '../assets/about-banner.png';
+import aboutBanner from '../assets/about-banner.png'
 import aboutBanner2 from '../assets/about-banner2.png'
+import tracker1 from '../assets/tracker1.png'
+import tracker4 from '../assets/tracker4.png'
+import tracker7 from '../assets/tracker7.png'
 
 const About = () => {
   return (
@@ -68,11 +71,67 @@ const About = () => {
         </div>
       </div>
 
-      <div className='w-full h-24 sm:h-80 md:h-[400px]'>
-        <img src={aboutBanner2} alt="" />
+      {/* Top Products Section */}
+      <div className="max-w-6xl mx-auto px-6 py-16 text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8">Our Top Products</h2>
+        <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-lg">
+          SoftTrack’s hardware and software work hand-in-hand to power real-time visibility and control. Here are a few of our standout products driving innovation in the field.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Product Card 1 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src={tracker1}
+              alt="Compact GPS Tracker"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4 text-left">
+              <h3 className="text-xl font-semibold text-blue-600 mb-2">Compact GPS Tracker</h3>
+              <p className="text-gray-600 text-sm">
+                Lightweight, long battery life, and ideal for small asset tracking — a favorite among our mobile users.
+              </p>
+            </div>
+          </div>
+
+          {/* Product Card 2 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src={tracker4}
+              alt="Fleet Tracker Pro"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4 text-left">
+              <h3 className="text-xl font-semibold text-blue-600 mb-2">Fleet Tracker Pro</h3>
+              <p className="text-gray-600 text-sm">
+                Designed for full-fleet logistics and delivery networks, offering reliable real-time tracking and remote configuration.
+              </p>
+            </div>
+          </div>
+
+          {/* Product Card 3 */}
+          <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src={tracker7}
+              alt="IoT Edge Device"
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4 text-left">
+              <h3 className="text-xl font-semibold text-blue-600 mb-2">IoT Edge Device</h3>
+              <p className="text-gray-600 text-sm">
+                Built for smart environments and industrial IoT — combines tracking, sensor data, and intelligent alerts.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Optional Vision/Team Section */}
+      {/* Banner Image */}
+      <div className="w-full h-24 sm:h-80 md:h-[400px]">
+        <img src={aboutBanner2} alt="SoftTrack Team" className="w-full h-full object-cover" />
+      </div>
+
+      {/* Vision Section */}
       <div className="max-w-5xl mx-auto px-6 py-16 text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">Looking Ahead</h2>
         <p className="text-gray-600 text-lg leading-relaxed">

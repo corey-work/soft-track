@@ -14,12 +14,12 @@ import Services from "./pages/services/Service";
 import Software from "./pages/services/Software";
 import Hardware from "./pages/services/Hardware";
 import ProductImageDetail from "./pages/products/ProductImageDetail";
+import Cart from "./pages/cart/Cart";
 
 function App() {
   usePageTitle()
   return (
     <>
-    
       <Navbar />
       <div>
         <Routes>
@@ -34,6 +34,7 @@ function App() {
           <Route path="/support" element={<SupportPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<NewsPage />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
       <Footer />

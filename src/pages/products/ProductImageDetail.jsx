@@ -3,11 +3,10 @@ import { useParams, Link } from 'react-router-dom'
 import { products } from '../../data/products'
 
 const ProductImageDetail = () => {
-  const { productId, imageIndex } = useParams()
+  const { productId } = useParams()
   const product = products.find((p) => p.id === productId)
-  const imageObj = product?.images?.[imageIndex]
 
-  if (!product || !imageObj) {
+  if (!product) {
     return (
       <div className="p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Image not found</h2>
@@ -19,47 +18,39 @@ const ProductImageDetail = () => {
   }
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-16">
-      {/* Title */}
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">
-          {product.name}
-        </h1>
-        <p className="text-gray-500 mt-2">{imageObj.description}</p>
-      </div>
+    <div className="w-full max-w-6xl mx-auto px-6 py-16">
+      <div className="grid md:grid-cols-2 gap-10 items-start">
+        {/* Image */}
+        <img
+          src={product.image}
+          alt={`${product.name} image`}
+          className="w-full max-h-[500px] object-contain rounded-xl shadow-lg"
+        />
 
-      {/* Image Section */}
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        {/* Main Image */}
-        <div className="flex-1">
-          <img
-            src={imageObj.src}
-            alt={`Image ${imageIndex}`}
-            className="w-full max-h-[500px] object-contain rounded-xl shadow-lg"
-          />
+        {/* Product Info */}
+        <div className="text-gray-700 space-y-4 text-base">
+          <h1 className="text-2xl font-bold text-blue-600">
+            {product.name} – CAN BUS Reading
+          </h1>
+
+          <p className="text-xl font-semibold text-gray-800">{product.price}</p>
+          <p className="whitespace-pre-line">{product.description}</p>
+
+          <ul className="list-disc list-inside mt-4">
+            {product.features.map((f, i) => (
+              <li key={i}>{f}</li>
+            ))}
+          </ul>
+
+          <p className="text-blue-600 mt-6 font-medium">Contact us to offer you a special offer!!</p>
+
+          <Link
+            to={`/products/${productId}`}
+            className="inline-block mt-6 text-sm text-blue-500 hover:underline"
+          >
+            ← Back to Product
+          </Link>
         </div>
-
-        {/* Thumbnails */}
-        <div className="flex flex-row md:flex-col gap-4 md:mt-0 mt-6 md:w-[160px]">
-          {[...Array(4)].map((_, i) => (
-            <img
-              key={i}
-              src={imageObj.src}
-              alt={`Thumbnail ${i + 1}`}
-              className="w-24 h-24 object-cover rounded-md border border-gray-200 shadow-sm"
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Back Link */}
-      <div className="mt-10 text-center">
-        <Link
-          to={`/products/${productId}`}
-          className="text-blue-600 hover:underline text-sm font-medium"
-        >
-          ← Back to Products
-        </Link>
       </div>
     </div>
   )

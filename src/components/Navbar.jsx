@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { navLinks } from '../constants'
 import { products } from '../data/products'
 import Search from './Search'
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -133,6 +134,11 @@ const Navbar = () => {
               </Link>
             </ul>
           ))}
+        </div>
+        <div>
+          <Link to={'/cart'}>
+          <FaShoppingCart size={20} className='text-white cursor-pointer' />
+          </Link>
         </div>
       </div>
     </div>

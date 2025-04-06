@@ -1,3 +1,7 @@
+import feature1 from '../assets/features/features1.png'
+import feature2 from '../assets/features/features2.png'
+import feature3 from '../assets/features/features3.png'
+
 export const navLinks = [
     {
         name: 'Home',
@@ -72,4 +76,22 @@ export const pricingCards = [
       headingColor: 'text-white'
     },
   ];
+
+  export const features = [
+    {
+      name: 'Trackers for the insurance telematics industry',
+      image: feature1,
+      text: 'Compact, robust, easy-to-install Teltonika FMx880 series GPS trackers for insurance companies and corporate fleets.',
+    },
+    {
+      name: 'E-toll certified vehicle gps trackers',
+      image: feature2,
+      text: 'Teltonika vehicle GPS devices certified for the e-TOLL system for tracking and automated payment processing in Poland.',
+    },
+    {
+      name: 'Luxury car tracking solution with FMC003',
+      image: feature3,
+      text: 'Accurate tracking, monitoring, and safeguarding of luxury car fleets with new Teltonika GPS.',
+    },
+  ]
   
