@@ -1,5 +1,5 @@
 import React from 'react'
-import { features } from '../constants'
+
 import img1 from '../assets/features/features4.png'
 import img2 from '../assets/features/features5.png'
 import img3 from '../assets/features/features6.png'
@@ -8,17 +8,6 @@ import img4 from '../assets/features/features7.png'
 const Features = () => {
   return (
     <section className='w-full p-6'>
-          <h1 className='text-center uppercase font-bold text-blue-500 text-3xl py-4'>Product use cases</h1>
-      <div className='max-w-[1300px] gap-3 mx-auto grid lg:grid-cols-3'>
-        {features.map((feature, i) => (
-            <div className='shadow-md' key={i}>
-                <img className='rounded-t-lg' src={feature.image} alt="" />
-                <h1 className='text-center text-3xl font-bold my-2 text-blue-600'>{feature.name}</h1>
-                <p className='p-2 text-center text-md mt-2 font-medium tracking-wide'>{feature.text}</p>
-            </div>
-        ))}
-      </div>
-        
         <div className=' bg-gray-100 max-w-[1240px] w-full mx-auto mt-40 gap-x-3.5 grid lg:grid-cols-2 items-center justify-center'>
             <div className='w-full'>
                 <img className='w-full' src={img1} alt="" />

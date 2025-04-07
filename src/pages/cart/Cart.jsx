@@ -44,7 +44,7 @@ const Cart = () => {
                   />
                   <div className="sm:ml-6 flex-1 mt-4 sm:mt-0">
                     <h2 className="text-xl font-semibold text-gray-800">{item.name}</h2>
-                    <p className="text-sm text-gray-500 mt-1">€{item.price.toFixed(2)}</p>
+                    <p className="text-sm text-gray-500 mt-1">£{item.price.toFixed(2)}</p>
                     <div className="mt-4 flex items-center gap-4">
                       <label htmlFor="quantity" className="text-sm font-medium">
                         Quantity:
@@ -71,7 +71,7 @@ const Cart = () => {
               <h3 className="text-2xl font-semibold mb-6">Order Summary</h3>
               <div className="flex justify-between mb-4 text-gray-700">
                 <span>Subtotal</span>
-                <span>€{total.toFixed(2)}</span>
+                <span>£{total.toFixed(2)}</span>
               </div>
               <div className="flex justify-between mb-6 text-gray-700">
                 <span>Shipping</span>
@@ -79,7 +79,7 @@ const Cart = () => {
               </div>
               <div className="border-t pt-4 flex justify-between text-lg font-semibold">
                 <span>Total</span>
-                <span>€{total.toFixed(2)}</span>
+                <span>£{total.toFixed(2)}</span>
               </div>
 
               <button className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition">

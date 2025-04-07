@@ -1,11 +1,22 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { products } from '../../data/products'
+import { useState } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
 
 
 const ProductDetails = () => {
+  const [count, setCount] = useState(0)
   const { productId } = useParams()
   const product = products.find((p) => p.id === productId)
+
+  const increment = () => {
+    setCount(count + 1)
+  }
+  const decrement = () => {
+    setCount(count - 1)
+  }
+  
 
   if (!product) {
     return (
@@ -36,40 +47,43 @@ const ProductDetails = () => {
 
       {/* Product Info */}
       <div className="p-6 sm:p-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-        {/* Image */}
+        {/* Product Image */}
         <img
           src={product.image}
           alt={product.name}
           className="w-full object-contain rounded-lg shadow-lg"
         />
 
-        {/* Text */}
+        {/* Product Details */}
         <div>
           <h2 className="text-xl text-black/60 font-semibold mb-4">{product.tagline}</h2>
-          <p className='font-bold text-3xl text-gray-900'>{product.price}</p>
+          <p className="font-bold text-3xl text-gray-900">{product.price}</p>
           <p className="text-gray-700 mb-4 whitespace-pre-line">{product.description}</p>
+
           <ul className="list-disc list-inside text-gray-600 mb-6">
             {product.features.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
           </ul>
 
-            <div className='flex flex-col'>
-              <label htmlFor="">SIM card:</label>
-            <select className='p-2 hover:cursor-pointer border border-gray-300' name="" id="">
-              <option value="">Choose an option</option>
-              <option value="">SIM card not included: €65.00</option>
-              <option value="">SIM card included: €95.00 </option>
+          {/* SIM Card Option */}
+          <div className="flex flex-col mb-4">
+            <label htmlFor="sim" className="mb-1 font-medium">SIM card:</label>
+            <select className="p-2 border border-gray-300 rounded" id="sim">
+              <option>Choose an option</option>
+              <option>SIM card not included: €65.00</option>
+              <option>SIM card included: €95.00</option>
             </select>
-            </div>
-          
-          <div className='flex py-3'>
-              <button className='bg-gray-200 px-2 hover:bg-gray-500 cursor-pointer transition-all ease-in'>-</button>
-              <button className='px-3 py-2 bg-blue-400 hover:bg-blue-700 transition-all ease-in cursor-pointer'>1</button>
-              <button className='bg-gray-200 px-2 hover:bg-gray-500 cursor-pointer transition-all ease-in'>+</button>
-              <div className='flex items-center justify-center'>
-                <button className='ml-6 font-bold px-4 py-3 rounded-lg bg-yellow-300 hover:bg-yellow-500 transition-all ease-in cursor-pointer'>Add to Cart</button>
-              </div>
+          </div>
+
+          {/* Quantity + Add to Cart */}
+          <div className="flex py-3 items-center ">
+            <button onClick={decrement} className="bg-gray-200 px-3 py-2 hover:bg-gray-400 cursor-pointer transition-all ease-in">-</button>
+            <span className="px-3 py-2 bg-blue-500 text-white">{count}</span>
+            <button onClick={increment} className="bg-gray-200 px-3 py-2 hover:bg-gray-400 cursor-pointer transition-all ease-in">+</button>
+            <button className="ml-4 flex items-center text-white font-bold px-4 py-3 rounded-lg bg-yellow-300 hover:bg-yellow-500 transition cursor-pointer">
+              Add to Cart <FaShoppingCart size={20} className='ml-3' />
+            </button>
           </div>
 
           <div className="mt-6">
@@ -79,6 +93,28 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
+
+      {/* Product Use Cases */}
+      {product.useCases && product.useCases.length > 0 && (
+        <div className="mt-20 px-6">
+          <h2 className="text-3xl font-bold text-blue-500 text-center mb-8 uppercase">Product Use Cases</h2>
+          <div className="max-w-[1300px] mx-auto grid lg:grid-cols-3 gap-6">
+            {product.useCases.map((useCase, index) => (
+              <div key={index} className="shadow-md bg-white rounded-lg overflow-hidden">
+                <img
+                  className="w-full h-52 object-cover"
+                  src={useCase.image}
+                  alt={useCase.name}
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-blue-600 mb-2 text-center">{useCase.name}</h3>
+                  <p className="text-sm text-gray-600 text-center">{useCase.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
