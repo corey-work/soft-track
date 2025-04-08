@@ -15,12 +15,14 @@ import Software from "./pages/services/Software";
 import Hardware from "./pages/services/Hardware";
 import ProductImageDetail from "./pages/products/ProductImageDetail";
 import Cart from "./pages/cart/Cart";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   usePageTitle()
   return (
     <>
       <Navbar />
+        <ScrollToTop />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
