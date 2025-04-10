@@ -8,7 +8,7 @@ const Display = () => {
     <div className='w-full py-8 mt-6 bg-gray-200'>
       <div className='max-w-[1450px] w-full mx-auto grid lg:grid-cols-2 place-items-center'>
         <div className='relative py-5'>
-            <img className='max-w-[400px] h-[300px] object-cover bg-white w-full border border-gray-200 brightness-55 rounded-xl hover:brightness-50' src={img1} alt="" />
+            <img loading='lazy' className='max-w-[400px] h-[300px] object-cover bg-white w-full border border-gray-200 brightness-55 rounded-xl hover:brightness-50' src={img1} alt="" />
             <div className='absolute uppercase inset-0 text-center p-5 flex flex-col items-center justify-center'>
                 <h1 className='text-3xl py-5 items-start text-white font-bold'>Our Product gallery</h1>
                 <Link to={'/products/trackers'}>
@@ -18,7 +18,7 @@ const Display = () => {
             </div>
         </div>
         <div className='relative uppercase'>
-            <img className='max-w-[400px] h-[300px] object-cover bg-white w-full border border-gray-200 brightness-55 rounded-xl' src={img2} alt="" />
+            <img loading='lazy' className='max-w-[400px] h-[300px] object-cover bg-white w-full border border-gray-200 brightness-55 rounded-xl' src={img2} alt="" />
             <div className='absolute inset-0 text-center p-5 flex flex-col items-center justify-center'>
                 <h1 className='text-3xl py-5 items-start text-white font-bold'>Support</h1>
                 <Link to={'/support'}>

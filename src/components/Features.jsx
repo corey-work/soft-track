@@ -10,7 +10,7 @@ const Features = () => {
     <section className='w-full p-6'>
         <div className=' bg-gray-100 max-w-[1240px] w-full mx-auto mt-40 gap-x-3.5 grid lg:grid-cols-2 items-center justify-center'>
             <div className='w-full'>
-                <img className='w-full' src={img1} alt="" />
+                <img loading='lazy' className='w-full' src={img1} alt="" />
             </div>
             
             <div>
@@ -32,7 +32,7 @@ const Features = () => {
 
         <div className='max-w-[1240px] w-full mx-auto mt-10 gap-x-3.5 grid lg:grid-cols-2 items-center justify-center'>
             <div className='w-full'>
-                <img className='w-full' src={img3} alt="" />
+                <img loading='lazy' className='w-full' src={img3} alt="" />
             </div>
             
             <div>
@@ -48,7 +48,7 @@ const Features = () => {
             </div>
 
             <div className='w-full'>
-                <img className='w-full' src={img4} alt="" />
+                <img loading='lazy' className='w-full' src={img4} alt="" />
             </div>
         </div>
 

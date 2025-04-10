@@ -7,6 +7,7 @@ const Hero = () => {
     <div className="relative w-full h-screen">
       {/* Background Image */}
       <img
+      loading='lazy'
         className="w-full h-full object-cover brightness-50"
         src={hero}
         alt="SoftTrack Hero"

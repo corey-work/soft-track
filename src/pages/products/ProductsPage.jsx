@@ -13,7 +13,7 @@ const ProductsPage = () => {
 
   const handleAddToCart = (product) => {
     addToCart(product, 1)
-    toast('Item has successfully been added to the cart')
+    toast.success('Item has successfully been added to the cart')
   }
 
 
