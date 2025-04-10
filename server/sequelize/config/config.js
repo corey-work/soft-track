@@ -1,12 +1,17 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
+
+console.log('DB_USER:', process.env.DB_USER)
+console.log('DB_PASSWORD:', process.env.DB_PASSWORD)
+
 
 module.exports = {
   development: {
-    username: process.env.pgUser,
-    host: process.env.pgHost,
-    database: process.env.pgDatabase,
-    password: process.env.pgPassword,
-    port: process.env.pgPort,
+    username: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
     dialect: "postgres"
   },
   test: {
