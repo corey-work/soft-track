@@ -3,10 +3,6 @@ const { Product } = require('../sequelize/models')
 const getAllProducts = async (req, res) => {
     try {
         const products = await Product.findAll();
-    
-        if (!products) {
-            return res.status(404).json({ message: 'Products not found' });
-        }
         res.status(200).json(products)
         
     } catch (error) {
@@ -23,6 +19,7 @@ const getProduct = async (req, res) => {
         if (!product) {
             return res.status(404).json({ message: 'Product not found'});
         }
+        res.status(200).json(product)
     } catch (error) {
         res.status(500).json({ message: 'Internal server error', error: error.message });
     }
@@ -34,6 +31,9 @@ const createProduct = async (req, res) => {
     { name, price, shortText, 
     longText, category } = req.body
 
+    if (!name || !price || !category) {
+        return res.status(400).json({ message: 'Missing fields required' })
+    }
     try {
         const newProduct = await Product.create({ name, price, shortText, longText, category });
     
@@ -53,14 +53,14 @@ const updateProduct = async (req, res) => {
 
     try {
         const product = await Product.findByPk(id);
-        await product.update({ name, price, shortText, longText, category })
-
+        
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
+        await product.update({ name, price, shortText, longText, category })
         res.status(200).json(product)
     } catch (error) {
-        res.status(500).json({ message: 'Interal server error', error: error.message });
+        res.status(500).json({ message: 'Internal server error', error: error.message });
     }
 }
 
