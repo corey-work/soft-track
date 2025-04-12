@@ -5,10 +5,10 @@ const
 updateProduct, deleteProduct } = require('../controllers/productController')
 const { verifyToken, isAdmin } = require('../middleware/authMiddleware')
 
-router.get('/', verifyToken, isAdmin, getAllProducts)
-router.get('/:id',verifyToken, isAdmin, getProduct)
-router.post('/create',verifyToken, isAdmin, createProduct)
+router.get('/', getAllProducts)
+router.get('/:id', getProduct)
+router.post('/create', createProduct)
 router.put('/update/:id',verifyToken, isAdmin, updateProduct);
-router.delete('/delete/:id',verifyToken, isAdmin, deleteProduct);
+router.delete('/delete/:id', deleteProduct);
 
 module.exports = router
