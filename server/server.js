@@ -5,12 +5,13 @@ const morgan = require('morgan')
 const { sequelize } = require('./sequelize/models')
 const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:5173'}));
 app.use(morgan('dev'))
 const middleware = (err, req, res, next) => {
     if (err) {
@@ -21,8 +22,9 @@ const middleware = (err, req, res, next) => {
 }
 
 app.use(middleware)
-app.use('/api/products', productRoutes)
-app.use('/api/auth', authRoutes)
+app.use('/api/products', productRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/cart', cartRoutes);
 
 const connectDb = async () => {
     console.log('Checking database connection...')
